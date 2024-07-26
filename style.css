@@ -457,5 +457,100 @@ body {
     0 0 10px rgba(44, 62, 80, 0.6), /* Outer glow */
     0 0 20px rgba(44, 62, 80, 0.4) inset; /* Inner glow */
 }
+.education-section {
+  margin: 40px 0;
+}
 
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
 
+.education-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 15px;
+  position: relative;
+}
+
+.education-card::before,
+.education-card::after {
+  content: '';
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  transition: box-shadow 0.3s ease;
+}
+
+.education-card::before {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.education-card::after {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+}
+
+.education-card:hover::before {
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.education-card:hover::after {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+.education-content {
+  padding: 15px;
+}
+
+.education-content h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.education-content p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.year {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.cgpa, .percentage {
+  font-weight: bold;
+  background-color: #eaf4ff;
+  padding: 3px 6px;
+  border-radius: 5px;
+  display: inline-block;
+}
+/* Update heading styles to match certification section */
+.profile-text h2,
+.container h2 {
+    font-size: 2.5rem; /* Match the certification section title size */
+    margin-bottom: 2rem;
+    color: #2c3e50; /* Dark slate blue */
+    font-weight: 700;
+    padding-bottom: 0.5rem; /* Add some bottom padding */
+}
+
+.skill-container h2 {
+    font-size: 2.5rem; /* Match the certification section title size */
+    margin-bottom: 2rem;
+    color: #2c3e50; /* Dark slate blue */
+    font-weight: 700;
+    padding-bottom: 0.5rem; /* Add some bottom padding */
+}
